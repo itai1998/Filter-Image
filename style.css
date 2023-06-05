@@ -72,3 +72,21 @@ button.active{
     font-size: 18px;
     color:#333;
 }
+form{
+    display: flex;
+    justify-content: center; 
+    /* align-items: center; */
+}
+.search_containter{
+    /* background-color: #4070f4; */
+    margin: 20px;
+}
+.search_bar{
+    margin-right: 15px;
+    
+}
+
+.search_button:hover{
+   background-color: #4070f4;
+   color: #fff;
+}
