@@ -39,6 +39,9 @@ const searchFilter = e =>{
         }
     })
     searchInput.value = "";
+    document.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+    
 }
 
 // Add click event listener to each filter button
