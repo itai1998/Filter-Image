@@ -26,6 +26,11 @@ const filterCards = e =>{
 }
 
 const searchFilter = e =>{
+   
+    document.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+
+    // Store the input text in from the search bar
     const searchResult = searchInput.value;
 
     // Iterate over each filterable card
@@ -33,15 +38,15 @@ const searchFilter = e =>{
         // Add "hide" class to hide the card iniially
         card.classList.add("hide");
       
-        // Check if the card matches the selected filter or "all" is selected
+        // Check if the text from the search bar and the card data-name matches 
         if(searchResult === card.dataset.name){
             card.classList.remove ("hide");
         }
     })
+
+    // Empty the search bar
     searchInput.value = "";
-    document.querySelector(".active").classList.remove("active");
-    e.target.classList.add("active");
-    
+
 }
 
 // Add click event listener to each filter button
