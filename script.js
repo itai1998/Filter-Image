@@ -5,9 +5,11 @@ const filterButton = document.querySelectorAll(".filter_buttons button");
 
 // Get all the .card class under .filterable_cards class
 const filterableCards = document.querySelectorAll(".filterable_cards .card");
-
 const searchButton = document.querySelector(".search_button");
 const searchInput = document.querySelector(".search_bar");
+
+const popButton = document.querySelector(".popup_button");
+
 
 // Define the filterCards function
 const filterCards = e =>{
@@ -49,6 +51,20 @@ const searchFilter = e =>{
 
 }
 
+const togglePopup = () =>{
+    document.getElementById("popup-1").classList.toggle("active2");
+}
+
+// function togglePopup(){
+//     document.getElementById("popup-1").classList.toggle("active2");
+// }
+
+
 // Add click event listener to each filter button
 filterButton.forEach(button => button.addEventListener("click", filterCards));
 searchButton.addEventListener("click", searchFilter);
+popButton.addEventListener("click", togglePopup);
+
+
+
+
