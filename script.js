@@ -77,7 +77,10 @@ const togglePopup = (button) =>{
     }else if (button.id === "shoe2"){
         pictureElement.src = "images/shoe-2.avif";
     }
-    
+}
+
+const toggleClose = () =>{
+    document.getElementById("popup-1").classList.toggle("active2");
 }
 
 filterButton.forEach(button => button.addEventListener("click", filterCards));
