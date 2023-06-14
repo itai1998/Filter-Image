@@ -8,7 +8,10 @@ const filterableCards = document.querySelectorAll(".filterable_cards .card");
 const searchButton = document.querySelector(".search_button");
 const searchInput = document.querySelector(".search_bar");
 
-const popButton = document.querySelector(".popup_button");
+//const popButton = document.querySelector(".popup_button");
+
+// Test
+const popButton = document.querySelectorAll(".popup_button");
 
 
 // Define the filterCards function
@@ -51,19 +54,39 @@ const searchFilter = e =>{
 
 }
 
-const togglePopup = () =>{
+
+const togglePopup = (button) =>{
     document.getElementById("popup-1").classList.toggle("active2");
+  
+    // Pop a correct picture 
+    const pictureElement = document.getElementById("picture");
+
+
+    if(button.id === "phone1"){
+        pictureElement.src = "images/phone-1.jpg";
+    }else if(button.id === "phone2"){
+        pictureElement.src = "images/phone-2.jpeg";
+    }else if(button.id === "cloth1"){
+        pictureElement.src = "images/cloth-1.webp";
+    }else if(button.id === "cloth2"){
+        pictureElement.src = "images/cloth-2.jpg";
+    }else if(button.id === "cloth3"){
+        pictureElement.src = "images/cloth-3.jpg";
+    }else if(button.id === "shoe1"){
+        pictureElement.src = "images/shoe-1.webp";
+    }else if (button.id === "shoe2"){
+        pictureElement.src = "images/shoe-2.avif";
+    }
+    
 }
 
-// function togglePopup(){
-//     document.getElementById("popup-1").classList.toggle("active2");
-// }
-
-
-// Add click event listener to each filter button
 filterButton.forEach(button => button.addEventListener("click", filterCards));
 searchButton.addEventListener("click", searchFilter);
-popButton.addEventListener("click", togglePopup);
+popButton.forEach(button => button.addEventListener("click", function() {
+    togglePopup(this); // Pass the button element as an argument
+  }));
+
+
 
 
 
