@@ -2,15 +2,12 @@
 
 // Get all the buttons under .filter_buttons class
 const filterButton = document.querySelectorAll(".filter_buttons button");
-
-// Get all the .card class under .filterable_cards class
 const filterableCards = document.querySelectorAll(".filterable_cards .card");
 const searchButton = document.querySelector(".search_button");
 const searchInput = document.querySelector(".search_bar");
 const popButton = document.querySelectorAll(".popup_button");
-
-// Change background color selector
 const selectedBackground = document.getElementById("BackgroundColor");
+
 
 
 // Define the filterCards function
@@ -91,6 +88,8 @@ const changeBackground = () =>{
     }
 }
 
+
+// Click Action
 filterButton.forEach(button => button.addEventListener("click", filterCards));
 searchButton.addEventListener("click", searchFilter);
 popButton.forEach(button => button.addEventListener("click", function() {
