@@ -7,7 +7,6 @@
 body{
     min-height: 100vh;
     background: #c7bacb;
-
 }
 .container{
     position: relative;
@@ -188,5 +187,26 @@ form{
     cursor: pointer;
 }
 
+.dropDown {
+    position: absolute;
+    right: 0;
+   
+}
+
+.dropDown label{
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #ede1e1;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.dropDown select{
+    padding: 5px 10px;
+    font-size: 18px;
+    background: #ede1e1;
+   
+}
 
 

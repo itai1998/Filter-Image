@@ -7,11 +7,10 @@ const filterButton = document.querySelectorAll(".filter_buttons button");
 const filterableCards = document.querySelectorAll(".filterable_cards .card");
 const searchButton = document.querySelector(".search_button");
 const searchInput = document.querySelector(".search_bar");
-
-//const popButton = document.querySelector(".popup_button");
-
-// Test
 const popButton = document.querySelectorAll(".popup_button");
+
+// Change background color selector
+const selectedBackground = document.getElementById("BackgroundColor");
 
 
 // Define the filterCards function
@@ -60,8 +59,6 @@ const togglePopup = (button) =>{
   
     // Pop a correct picture 
     const pictureElement = document.getElementById("picture");
-
-
     if(button.id === "phone1"){
         pictureElement.src = "images/phone-1.jpg";
     }else if(button.id === "phone2"){
@@ -83,11 +80,24 @@ const toggleClose = () =>{
     document.getElementById("popup-1").classList.toggle("active2");
 }
 
+const changeBackground = () =>{
+
+    if(selectedBackground.value==="pink"){
+        document.body.style.backgroundColor = "#c7bacb";
+    }else if(selectedBackground.value==="blue"){
+        document.body.style.backgroundColor = "#5daecb";
+    }else{
+        document.body.style.backgroundColor = "#42b38b";
+    }
+}
+
 filterButton.forEach(button => button.addEventListener("click", filterCards));
 searchButton.addEventListener("click", searchFilter);
 popButton.forEach(button => button.addEventListener("click", function() {
     togglePopup(this); // Pass the button element as an argument
   }));
+
+selectedBackground.addEventListener("change", changeBackground);
 
 
 
