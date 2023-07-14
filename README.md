@@ -6,7 +6,7 @@ Filter-Image Project is a HTML, CSS, and JavaScript project which allows the use
 ### Clone this repository
 - Open the command terminal
 - Navigate to the file using these commands:
-    - **git clone**[ https://github.com/itai1998/Filter-Image.git](https://github.com/itai1998/Filter-Image.git)
+    - **git clone** https://github.com/itai1998/Filter-Image.git
     - **cd Filter-Image**
 
 ## Run the program
